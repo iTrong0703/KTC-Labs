@@ -1,17 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function SimpleRandom() {
-  const [randomNumber, setRandomNumber] = useState(99);
-  const [min, setMin] = useState(1);
-  const [max, setMax] = useState(100);
+  const [randomNumber, setRandomNumber] = useState<number>(99);
+  const [min, setMin] = useState<number>(1);
+  const [max, setMax] = useState<number>(100);
 
   const generateRandomNumber = () => {
-    const minValue = parseInt(min.toString()) || 0;
-    const maxValue = parseInt(max.toString()) || 100;
-
-    const actualMin = Math.min(minValue, maxValue);
-    const actualMax = Math.max(minValue, maxValue);
-
+    const actualMin = Math.min(min, max);
+    const actualMax = Math.max(min, max);
     const random =
       Math.floor(Math.random() * (actualMax - actualMin + 1)) + actualMin;
     setRandomNumber(random);

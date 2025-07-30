@@ -74,7 +74,8 @@ public class Main {
         double tongChiTieu = tienDien + tienTaxi;
         double thuNhapConLai = luongSauThue - tongChiTieu;
         System.out.println("=> Tổng chi tiêu: " + tongChiTieu + " VND");
-        System.out.println("=> Thu nhập còn lại sau chi tiêu: " + thuNhapConLai + " VND");
+        System.out.println("=> Thu nhập còn lại sau chi tiêu: " + String.format("%,d", thuNhapConLai) + " VND");
+
     }
     public static void pause(Scanner sc) {
         System.out.print("Nhấn Enter để tiếp tục...");

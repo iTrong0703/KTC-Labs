@@ -1,5 +1,5 @@
 -- Yêu cầu 1
-CREATE DATABASE sales_management;
+CREATE DATABASE if not exists sales_management;
 
 -- Yêu cầu 2
 ALTER DATABASE sales_management CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
